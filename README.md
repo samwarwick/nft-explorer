@@ -3,7 +3,7 @@ Minimalist DApp for viewing Ethereum ERC721 NFT contracts.
 
 Originally created to provide a simple way to visualise the [Castle NFTs](https://github.com/samwarwick/castle-nft) created as a result of the [How to write & deploy an NFT](https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/) Ethereum tutorial.
 
-<img src="NFT_Explorer.PNG" width="450" style="border: 2px solid #555">
+<kbd><img src="NFT_Explorer.PNG" width="450"></kbd>
 
 ## Stack
 
