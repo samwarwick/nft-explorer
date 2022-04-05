@@ -103,7 +103,8 @@ class App extends React.Component {
 
       this.setState({ loading: true});
 
-      if (MOCK_WEB3) {
+      if (MOCK_WEB3 === true) {
+          console.log('Using mocked response');
           this.setState({ loadedContractAddress: this.state.contractAddress});
           this.setState({ token: `${mocks.name} (${mocks.symbol})`});
           this.setState({ nfts: mocks.tokens });
