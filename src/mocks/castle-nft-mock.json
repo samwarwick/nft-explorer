@@ -1,0 +1,136 @@
+{
+  "name": "Castle Mock",
+  "symbol": "ROOK",
+  "tokens": [
+    {
+      "tokenId": 1,
+      "metadata": {
+        "attributes": [
+          {
+            "trait_type": "Colour",
+            "value": "Grey"
+          },
+          {
+            "trait_type": "Door",
+            "value": "Default"
+          },
+          {
+            "trait_type": "Sky",
+            "value": "Blue"
+          }
+        ],
+        "description": "Standard castle",
+        "image": "https://raw.githubusercontent.com/samwarwick/castle-nft/main/images/castle-main.png",
+        "name": "Castle"
+      },
+      "tokenURI": "https://gateway.pinata.cloud/ipfs/Qmdh88hxWq78idcGuKa5qLg3Dixpht86EFsHTTdrq7wAqo/castle-main.json",
+      "ownerAccount": "0xdC2a99d0e0b340419A26f8aeDeA5e157ab8c1484",
+      "currentAccount": "0xdC2a99d0e0b340419A26f8aeDeA5e157ab8c1484",
+      "network": "rinkeby"
+    },
+    {
+      "tokenId": 2,
+      "metadata": {
+        "attributes": [
+          {
+            "trait_type": "Colour",
+            "value": "Grey"
+          },
+          {
+            "trait_type": "Door",
+            "value": "Default"
+          },
+          {
+            "trait_type": "Sky",
+            "value": "Blue Sun"
+          }
+        ],
+        "description": "Standard castle in the sun",
+        "image": "https://raw.githubusercontent.com/samwarwick/castle-nft/main/images/castle-sun.png",
+        "name": "Castle Sun"
+      },
+      "tokenURI": "https://gateway.pinata.cloud/ipfs/Qmdh88hxWq78idcGuKa5qLg3Dixpht86EFsHTTdrq7wAqo/castle-sun.json",
+      "ownerAccount": "0xdC2a99d0e0b340419A26f8aeDeA5e157ab8c1484",
+      "currentAccount": "0x3eb0d0c317eb038ebbfddc0cb0ca913247b5b274",
+      "network": "rinkeby"
+    },
+    {
+      "tokenId": 3,
+      "metadata": {
+        "attributes": [
+          {
+            "trait_type": "Colour",
+            "value": "Grey"
+          },
+          {
+            "trait_type": "Door",
+            "value": "Default"
+          },
+          {
+            "trait_type": "Sky",
+            "value": "Night"
+          }
+        ],
+        "description": "Standard castle at night",
+        "image": "https://raw.githubusercontent.com/samwarwick/castle-nft/main/images/castle-night.png",
+        "name": "Castle Night"
+      },
+      "tokenURI": "https://gateway.pinata.cloud/ipfs/Qmdh88hxWq78idcGuKa5qLg3Dixpht86EFsHTTdrq7wAqo/castle-night.json",
+      "ownerAccount": "0xdC2a99d0e0b340419A26f8aeDeA5e157ab8c1484",
+      "currentAccount": "0x3eb0d0c317eb038ebbfddc0cb0ca913247b5b274",
+      "network": "rinkeby"
+    },
+    {
+      "tokenId": 4,
+      "metadata": {
+        "attributes": [
+          {
+            "trait_type": "Colour",
+            "value": "Grey"
+          },
+          {
+            "trait_type": "Door",
+            "value": "Red"
+          },
+          {
+            "trait_type": "Sky",
+            "value": "Blue"
+          }
+        ],
+        "description": "Standard castle with red door",
+        "image": "https://raw.githubusercontent.com/samwarwick/castle-nft/main/images/castle-red-door.png",
+        "name": "Castle Red Door"
+      },
+      "tokenURI": "https://gateway.pinata.cloud/ipfs/Qmdh88hxWq78idcGuKa5qLg3Dixpht86EFsHTTdrq7wAqo/castle-red-door.json",
+      "ownerAccount": "0xdC2a99d0e0b340419A26f8aeDeA5e157ab8c1484",
+      "currentAccount": "0x3eb0d0c317eb038ebbfddc0cb0ca913247b5b274",
+      "network": "rinkeby"
+    },
+    {
+      "tokenId": 5,
+      "metadata": {
+        "attributes": [
+          {
+            "trait_type": "Colour",
+            "value": "White"
+          },
+          {
+            "trait_type": "Door",
+            "value": "Default"
+          },
+          {
+            "trait_type": "Sky",
+            "value": "Blue"
+          }
+        ],
+        "description": "Standard castle in white",
+        "image": "https://raw.githubusercontent.com/samwarwick/castle-nft/main/images/castle-white.png",
+        "name": "White Castle"
+      },
+      "tokenURI": "https://gateway.pinata.cloud/ipfs/Qmdh88hxWq78idcGuKa5qLg3Dixpht86EFsHTTdrq7wAqo/castle-white.json",
+      "ownerAccount": "0xdC2a99d0e0b340419A26f8aeDeA5e157ab8c1484",
+      "currentAccount": "0x3eb0d0c317eb038ebbfddc0cb0ca913247b5b274",
+      "network": "rinkeby"
+    }
+  ]
+}
