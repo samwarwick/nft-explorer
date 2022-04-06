@@ -6,6 +6,7 @@ import Gallery from './components/gallery';
 import NFT from './components/nft';
 import mocks from './mocks/castle-nft-mock.json';
 import { Button, Container, Divider, Form, Header, Icon, Input, Loader } from 'semantic-ui-react';
+import { mapEtherscanUrl, mapMetadataUrl, mapNetworkName } from './Utils';
 
 const CASTLE_NFT_ADDRESS = "0x91a77525830109968b6Ab745cDC7150aeFFD008C";
 const abi = contract.abi;
@@ -47,8 +48,9 @@ class App extends React.Component {
 
       const provider = new ethers.providers.Web3Provider(ethereum);
       const network = await provider.getNetwork();
-      console.log(`network: ${network.name}`);
-      this.setState({ network: network.name});
+      const networkName = mapNetworkName(network.name);
+      console.log(`network: ${networkName}`);
+      this.setState({ network: networkName});
   }
 
   async connectWalletHandler() { 
@@ -80,7 +82,7 @@ class App extends React.Component {
 
   contractLink() {
       if (!this.state.loadedContractAddress) return '';
-      const url = `https://${this.state.network}.etherscan.io/address/${this.state.loadedContractAddress}`;
+      const url = mapEtherscanUrl(`https://${this.state.network}.etherscan.io/address/${this.state.loadedContractAddress}`);
       return (
           <a href={url} target='_blank'>{this.state.loadedContractAddress}</a>);
   }
@@ -138,7 +140,7 @@ class App extends React.Component {
                   break;
               }
               console.log(`TokenID: ${tokenId} URI: ${tokenURI}`);
-              metadata = await this.loadJson(tokenURI);
+              metadata = await this.loadJson(mapMetadataUrl(tokenURI));
               if (metadata === null) {
                   console.log('Invalid metadata!');
               } else {
@@ -163,7 +165,7 @@ class App extends React.Component {
   }
 
   render() { 
-    const accountUrl = `https://${this.state.network}.etherscan.io/address/${this.state.currentAccount}`;
+    const accountUrl = mapEtherscanUrl(`https://${this.state.network}.etherscan.io/address/${this.state.currentAccount}`);
 
     return (
       <Container>

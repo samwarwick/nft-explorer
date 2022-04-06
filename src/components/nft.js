@@ -1,5 +1,6 @@
 import React from 'react';
 import { Divider, Grid, Header, Image, Table } from 'semantic-ui-react'
+import { mapEtherscanUrl, mapMetadataUrl } from '../Utils';
 
 const NFT = ({nft}) => {
     if (!nft) {
@@ -15,7 +16,7 @@ const NFT = ({nft}) => {
         );
     });
 
-    const ownerAccountUrl = `https://${nft.network}.etherscan.io/address/${nft.ownerAccount}`;
+    const ownerAccountUrl = mapEtherscanUrl(`https://${nft.network}.etherscan.io/address/${nft.ownerAccount}`);
 
     return (
         <div>  
@@ -31,8 +32,8 @@ const NFT = ({nft}) => {
             <div>          
                 <Image 
                     as='a'
-                    href={nft.metadata.image} target="_blank"
-                    src={nft.metadata.image} alt={nft.tokenId} size='medium' rounded
+                    href={mapMetadataUrl(nft.metadata.image)} target="_blank"
+                    src={mapMetadataUrl(nft.metadata.image)} alt={nft.tokenId} size='medium' rounded
                  />
             </div> 
             </Grid.Column> 
@@ -61,7 +62,9 @@ const NFT = ({nft}) => {
             </Grid>
        
             <div>
-                <a href={nft.tokenURI} target="_blank">Metadata</a> | <a href={nft.metadata.image} target="_blank">Image</a>
+                <a href={mapMetadataUrl(nft.tokenURI)} target="_blank">Metadata</a>
+                {' '}|{' '}
+                <a href={mapMetadataUrl(nft.metadata.image)} target="_blank">Image</a>
             </div>
         </div>   
     )

@@ -19,4 +19,8 @@ Originally created to provide a simple way to visualise the [Castle NFTs](https:
 3. http://localhost:3000
 4. Connect MetaMask to the Rinkeby testnet and view the sample contract.
 
-Note. The contract response from ethers can be mocked by setting `MOCK_WEB3=true` in the top of [App.js](src/App.js).
+## Notes
+
+ The contract response from ethers can be mocked by setting `MOCK_WEB3=true` in the top of [App.js](src/App.js).
+
+ A maximum of ten NFTs are shown. This is determined by `MAX_TOKENS` in [App.js](src/App.js).
