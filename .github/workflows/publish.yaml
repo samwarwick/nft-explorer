@@ -11,13 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Build with node
+    - name: Build and test
       uses: actions/setup-node@v1
       with:
         node-version: '16.x'
     - run: npm install
     - run: npm run build
-    - name: Test
     - run: npm run test
     - name: Deploy to pages
       uses: peaceiris/actions-gh-pages@v3
