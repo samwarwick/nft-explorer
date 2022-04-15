@@ -32,7 +32,7 @@ const NFT = ({nft}) => {
             <div>          
                 <Image 
                     as='a'
-                    href={mapMetadataUrl(nft.metadata.image)} target="_blank"
+                    href={mapMetadataUrl(nft.metadata.image)} target='_blank' rel='noreferrer'
                     src={mapMetadataUrl(nft.metadata.image)} alt={nft.tokenId} size='medium' rounded
                  />
             </div> 
@@ -42,7 +42,7 @@ const NFT = ({nft}) => {
             <div>
                 <b>Name:</b> {nft.metadata.name}<br/>
                 <b>Description:</b> {nft.metadata.description}<br/>
-                <b>Owner:</b> <a href={ownerAccountUrl} target="_blank">{nft.ownerAccount.substring(2, 10)}</a>
+                <b>Owner:</b> <a href={ownerAccountUrl} target='_blank' rel='noreferrer'>{nft.ownerAccount.substring(2, 10)}</a>
                 {nft.currentAccount.toLowerCase() === nft.ownerAccount.toLowerCase() ? " (mine)" : ""}
             </div>   
             <div>
@@ -62,9 +62,9 @@ const NFT = ({nft}) => {
             </Grid>
        
             <div>
-                <a href={mapMetadataUrl(nft.tokenURI)} target="_blank">Metadata</a>
+                <a href={mapMetadataUrl(nft.tokenURI)} target='_blank' rel='noreferrer'>Metadata</a>
                 {' '}|{' '}
-                <a href={mapMetadataUrl(nft.metadata.image)} target="_blank">Image</a>
+                <a href={mapMetadataUrl(nft.metadata.image)} target='_blank' rel='noreferrer'>Image</a>
             </div>
         </div>   
     )
