@@ -84,7 +84,7 @@ class App extends React.Component {
       if (!this.state.loadedContractAddress) return '';
       const url = mapEtherscanUrl(`https://${this.state.network}.etherscan.io/address/${this.state.loadedContractAddress}`);
       return (
-          <a href={url} target='_blank'>{this.state.loadedContractAddress}</a>);
+          <a href={url} target='_blank' rel='noreferrer'>{this.state.loadedContractAddress}</a>);
   }
 
   loadJson = async(url) => {
@@ -187,7 +187,7 @@ class App extends React.Component {
         <span className='nftx-label'>Network: </span>{this.state.network}
         </div>
         <div>
-        <span className='nftx-label'>Account: </span><a href={accountUrl} target="_blank">{this.state.currentAccount}</a>
+        <span className='nftx-label'>Account: </span><a href={accountUrl} target='_blank' rel='noreferrer'>{this.state.currentAccount}</a>
         </div>
 
         <br/>

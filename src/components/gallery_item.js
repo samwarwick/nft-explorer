@@ -5,7 +5,8 @@ import { mapMetadataUrl } from '../Utils';
 const GalleryItem = ({item, onItemSelect }) => {
     return (
         <List.Item>
-            <a href='#' onClick={() => onItemSelect(item)}>
+            { /* eslint-disable-next-line */ }
+            <a href='#' onClick={() => onItemSelect(item)}> 
                 <Image rounded
                     src={mapMetadataUrl(item.metadata.image)}
                     alt={item.tokenId}
