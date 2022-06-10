@@ -16,7 +16,7 @@ Deployed to [samwarwick.github.io/nft-explorer](https://samwarwick.github.io/nft
 
 ## Instructions
 
-1. `npm install`
+1. `npm install --legacy-peer-deps`
 2. `npm start`
 3. http://localhost:3000
 4. Connect MetaMask to the Rinkeby testnet and view the sample contract.
