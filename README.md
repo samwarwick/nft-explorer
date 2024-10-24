@@ -13,6 +13,7 @@ Deployed to [samwarwick.github.io/nft-explorer](https://samwarwick.github.io/nft
 -   [React](https://reactjs.org/)
 -   [Ethers](https://github.com/ethers-io/ethers.js)
 -   [MetaMask](https://metamask.io/)
+-   [Node](https://nodejs.org/en/blog/release/v20.18.0) 20
 -   [Semantic UI](https://react.semantic-ui.com/)
 
 ## Instructions
@@ -20,7 +21,7 @@ Deployed to [samwarwick.github.io/nft-explorer](https://samwarwick.github.io/nft
 1. `npm install --legacy-peer-deps`
 2. `npm start`
 3. http://localhost:3000
-4. Connect MetaMask to the Sepolia (Etherium) or Amoy (Polygon) testnet and view the sample contract.
+4. Connect MetaMask to the Sepolia testnet (Etherium) and view the sample contract.
 
 ## Notes
 

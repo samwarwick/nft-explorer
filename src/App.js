@@ -1,17 +1,18 @@
 import React from 'react';
+import { BrowserProvider, ethers } from 'ethers';
+import { Button, Container, Divider, Form, Header, Icon, Input, Loader } from 'semantic-ui-react';
+
 import './App.css';
 import contract from './contracts/CastleNFT.json';
-import { BrowserProvider, ethers } from 'ethers';
 import Gallery from './components/gallery';
 import NFT from './components/nft';
 import mocks from './mocks/castle-nft-mock.json';
-import { Button, Container, Divider, Form, Header, Icon, Input, Loader } from 'semantic-ui-react';
-import { mapEtherscanUrl, mapMetadataUrl, mapNetworkName } from './Utils';
+import { getExplorerUrl, mapMetadataUrl, mapNetworkName } from './Utils';
 
 const MOCK_WEB3 = false; // Mock ethers calls for reading contract data
 const MAX_TOKENS = 10; // Maximum number of NFTs to be loaded and displayed
 
-const CASTLE_NFT_ADDRESS = '0xEa864D1dC30398382E86ba836e8FbBfc6A48fa59';
+const CASTLE_NFT_ADDRESS = '0x0ed3F64BDdD661d52236C8d2290eC3884A0a6bDc'; // Sepolia
 const abi = contract.abi;
 
 class App extends React.Component {
@@ -86,9 +87,7 @@ class App extends React.Component {
 
     contractLink() {
         if (!this.state.loadedContractAddress) return '';
-        const url = mapEtherscanUrl(
-            `https://${this.state.network}.etherscan.io/address/${this.state.loadedContractAddress}`,
-        );
+        const url = getExplorerUrl(this.state.network, this.state.loadedContractAddress);
         return (
             <a href={url} target="_blank" rel="noreferrer">
                 {this.state.loadedContractAddress}
@@ -185,9 +184,7 @@ class App extends React.Component {
     }
 
     render() {
-        const accountUrl = mapEtherscanUrl(
-            `https://${this.state.network}.etherscan.io/address/${this.state.currentAccount}`,
-        );
+        const accountUrl = getExplorerUrl(this.state.network, this.state.currentAccount);
 
         return (
             <Container>
