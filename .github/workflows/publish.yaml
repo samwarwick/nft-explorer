@@ -10,16 +10,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Build and test
-      uses: actions/setup-node@v1
-      with:
-        node-version: '16.x'
-    - run: npm install --legacy-peer-deps
-    - run: npm run build
-    - run: npm run test
-    - name: Deploy to pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+      - uses: actions/checkout@v2
+      - name: Build and test
+        uses: actions/setup-node@v1
+        with:
+          node-version: '20.x'
+      - run: npm install --legacy-peer-deps
+      - run: npm run build
+      - run: npm run test
+      - name: Deploy to pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
